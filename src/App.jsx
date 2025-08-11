@@ -1,6 +1,8 @@
 import './App.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import markerShadowPng from "leaflet/dist/images/marker-shadow.png";
 
 function App() {
 
@@ -47,11 +49,15 @@ function App() {
     }
   ]
 
-/*Custom Icon
-const customIcon = new Icon({
-  iconUrl: '' or require(""),
-  iconSize: []
-})*/
+const customIcon = L.icon({
+  iconUrl: markerIconPng,
+  shadowUrl: markerShadowPng,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
 
   return (
 <div style={{
@@ -81,7 +87,7 @@ const customIcon = new Icon({
       />
 
       {markers.map(marker => (
-        <Marker key={marker.popUp.title} position={marker.geocode}>
+        <Marker key={marker.popUp.title} position={marker.geocode} icon={customIcon}>
           <Popup maxWidth={150} minWidth={150}>
             <div style={{ textAlign: "center" }}>
               <h3 style={{ margin: "5px 0" }}>{marker.popUp.title}</h3>
