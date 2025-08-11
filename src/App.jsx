@@ -84,27 +84,11 @@ function App() {
     shadowSize: [41, 41]
   });
 
-  return (
-    <div style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: "100vw",
-      height: "100vh",
-      backgroundColor: "#f0f0f0"
-    }}>
-      <div style={{
-        width: "800px",
-        height: "500px",
-        border: "2px solid #ccc",
-        borderRadius: "12px",
-        overflow: "hidden"
-      }}>
-        
+  return ( 
         <MapContainer 
           center={[48.0196, 66.9237]} 
-          zoom={4} 
-          style={{ width: "100%", height: "100%" }}
+          zoom={5} 
+          className="leaflet-container"
         >
           <TileLayer
             url={`https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}{r}.png?access-token=rYV20gequsBy3ANeRNdTMHz6X5htqVBZVXVK2BhIzXTbEafBUJVx8duoXesCAWqG`}
@@ -145,8 +129,6 @@ function App() {
             );
           })}
         </MapContainer>
-      </div>
-    </div>
   );
 }
 
