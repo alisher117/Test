@@ -87,7 +87,7 @@ function App() {
   return ( 
         <MapContainer 
           center={[48.0196, 66.9237]} 
-          zoom={5} 
+          zoom={4} 
           className="leaflet-container"
         >
           <TileLayer
