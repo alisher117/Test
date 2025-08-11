@@ -3,14 +3,14 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useRef } from "react";
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
+import markerIconPng from "./assets/geoMark.svg";
 import markerShadowPng from "leaflet/dist/images/marker-shadow.png";
 
 function App() {
 
   const markers = [
     {
-      geocode: [47.1167, 51.8833],
+      geocode: [47.105419, 51.893886],
       popUp: {
         title: 'Атырау',
         address: ' г. Атырау, улица Сатпаева 17Б, БЦ Atyrau Plaza, 2 этаж',
@@ -18,7 +18,7 @@ function App() {
       }
     },
     {
-      geocode: [43.2567, 76.9286],
+      geocode: [43.24533, 76.903549],
       popUp: {
         title: 'Алматы',
         address: 'г. Алматы, Ауэзова 60, угол Жамбыла, 8 этаж, офис 28. БЦ Almaty Residence',
@@ -26,7 +26,7 @@ function App() {
       }
     },
     {
-      geocode: [51.2225, 51.3725],
+      geocode: [51.2347124, 51.3936550],
       popUp: {
         title: 'Уральск',
         address: 'г. Уральск, Абулхайыр хана 2а, БЦ The Office 43',
@@ -34,7 +34,7 @@ function App() {
       }
     },
         {
-      geocode: [51.1677, 52.9950],
+      geocode: [51.16129, 53.03521],
       popUp: {
         title: 'Аксай',
         address: 'г.Аксай , ул. Дружба Народов 6/3',
@@ -42,15 +42,15 @@ function App() {
       }
     },
       {
-      geocode: [43.6481, 51.1722],
+      geocode: [43.654, 51.145],
       popUp: {
         title: 'Актау',
-        address: ' г.Актау, 14 микрорайон, здание № 74/1, 6 этаж, кабинет №61',
+        address: 'г.Актау, 14 микрорайон, здание № 74/1, 6 этаж, кабинет №61',
         contacts: '✉️ - info@fircaspian.com <br> 📞 - +7 712 276 32 72'
       }
     },
       {
-      geocode: [50.2839, 57.1669],
+      geocode: [50.291567278644315, 57.142518566891574],
       popUp: {
         title: 'Актобе',
         address: 'г.Актобе, пр. Санкибай батыра, 167«А» офис №108',
@@ -58,7 +58,7 @@ function App() {
       }
     },
     {
-      geocode: [51.1801, 71.4460],
+      geocode: [51.1455, 71.4061],
       popUp: {
         title: 'Астана',
         address: 'г. Астана, район Нура, шоссе Коргалжын, здание 3, БЦ «SMART» 4 этаж, офис 402',
